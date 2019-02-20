@@ -5,9 +5,11 @@ const app = express();
 
 app.use('/graphql', expressGraphQL({
   schema: schema,
-  graphiql:true
+
+  // Enable Graphiql Web UI.
+  graphiql: true
 }));
 
 app.listen(4000, () => {
-  console.log('Listening');
+  console.log('GraphQL Server Started');
 });
